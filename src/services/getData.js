@@ -1,7 +1,7 @@
 const { Firestore } = require("@google-cloud/firestore");
-const path = require('path');
+const path = require("path");
 
-async function storeData(id, data) {
+async function getData() {
   const pathKey = path.resolve("./serviceaccountkey.json");
   const db = new Firestore({
     projectId: "submissionmlgc-azharymunir",
@@ -9,7 +9,14 @@ async function storeData(id, data) {
   });
 
   const predictCollection = db.collection("predictions");
-  return predictCollection.doc(id).set(data);
+  const snapshot = await predictCollection.get();
+  let data = [];
+
+  snapshot.forEach((doc) => {
+    data.push({ id: doc.id, history: doc.data() });
+  });
+
+  return data;
 }
 
-module.exports = storeData;
+module.exports = getData;
