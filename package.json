@@ -1,0 +1,21 @@
+{
+  "name": "dicoding-final-applied-ml-with-gcp-be",
+  "version": "1.0.0",
+  "description": "submission for course \"Belajar Penerapan Machine Learning dengan Google Cloud\" in Dicoding",
+  "main": "index.js",
+  "keywords": [
+    "back-end",
+    "hapi.js",
+    "GCP"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Xrayya/dicoding-final-applied-ml-with-gcp-be.git"
+  },
+  "author": "Xrayya <nur.alkhiyar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xrayya/dicoding-final-applied-ml-with-gcp-be/issues"
+  },
+  "private": false
+}
